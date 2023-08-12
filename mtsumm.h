@@ -6,6 +6,8 @@
 #include <chrono>
 #include <ctime>
 #include <codecvt>
+#include <locale>
+typedef unsigned int uint;
 class mtsumm
 {
 private:

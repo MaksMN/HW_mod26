@@ -5,6 +5,8 @@
 #include <io.h>
 #include <fcntl.h>
 #endif
+
+typedef unsigned int uint;
 std::string getConfigValue(const std::string &path, const std::string &section, const std::string &value)
 {
     std::ifstream stream(path);
@@ -92,5 +94,8 @@ int main()
     mtsumm mts(array_count, threads_count);
     mts.initialise();
     mts.run();
+#if defined(_WIN64) || defined(_WIN32)
+    system("pause");
+#endif
     return 0;
 }
